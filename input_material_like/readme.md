@@ -5,10 +5,10 @@
 - we have an outer div surounding the elements, this has 100% width & height
 - the outer div contains:
 
-|> div
-|   > input
-|   > label
-|       > span
+ div
+ > input
+ > label
+   > span
 
 - we make the `input`, the `label` and `label:after` fill the parent
 - `label` and `label:after` are positioned absolute
