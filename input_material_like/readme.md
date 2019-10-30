@@ -17,5 +17,3 @@
 - we take advantage of html attributes: `focus` and `required` and we use css selectors `:focus & :valid`
 - when the input receives `focus` we `translateX` the `label:after` border 100%
 - if the input is `valid` we `translateX` the `label:after` border 0%
-
-no test ?
