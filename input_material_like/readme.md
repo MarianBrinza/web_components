@@ -4,6 +4,7 @@
 
 - we have an outer div surounding the elements, this has 100% width & height
 - the outer div contains:
+
 |> div
 |   > input
 |   > label
