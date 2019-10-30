@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* styles to center the input on page - presentation role only*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* wrapper div */
+.input-wrapper {
+  background-color: aquamarine;
+  width: 50%;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-style {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+  padding-top: 10px;
+  color: #595f6e;
+  outline: none;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.label-style {
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.label-style::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.label-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 17px;
+}
+
+.input-style:focus + .label-style .label-text,
+.input-style:valid + .label-style .label-text {
+  transform: translateY(-120%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.input-style:focus + .label-style::after {
+  transform: translateX(0%);
+}
+/* 
+
+we have a wrapper div with a fixed width/height
+make input 100% width & height
+make label 100% width & height + position absolute, bottom
+make the label::after 100% width & height + position absolute, bottom
+*/
