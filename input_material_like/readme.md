@@ -8,7 +8,7 @@
   1. div
       1. input
       2. label
-        1. span
+              1. span
 
 - we make the `input`, the `label` and `label:after` fill the parent
 - `label` and `label:after` are positioned absolute
